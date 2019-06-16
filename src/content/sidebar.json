@@ -1,0 +1,60 @@
+{
+  "sections": [
+    {
+      "name": "Project info",
+      "address": "#",
+      "initialized": true,
+      "subSections": [
+        {"name": "General", "address": "#", "initialized": true},
+        {
+          "name": "Fundraising",
+          "address": "#"
+        },
+        {
+          "name": "Previous rounds",
+          "address": "#"
+        },
+        {
+          "name": "Roadmap",
+          "address": "#"
+        },
+        {
+          "name": "Partnerships",
+          "address": "#"
+        }
+      ]
+    },
+    {
+      "name": "Team",
+      "address": "#"
+    },
+    {
+      "name": "Product",
+      "address": "#"
+    },
+    {
+      "name": "Financials",
+      "address": "#"
+    },
+    {
+      "name": "Risks",
+      "address": "#"
+    },
+    {
+      "name": "Data",
+      "address": "#"
+    },
+    {
+      "name": "Reviews",
+      "address": "#"
+    },
+    {
+      "name": "FAQ",
+      "address": "#"
+    },
+    {
+      "name": "Mentions",
+      "address": "#"
+    }
+  ]
+}

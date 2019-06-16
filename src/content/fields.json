@@ -1,0 +1,80 @@
+{
+  "name": {
+    "info": "Project name",
+    "placeholder": "Fashion coin",
+    "required": true,
+    "maxLength": 50,
+    "error": "Every project needs a name, doesn't it?",
+    "limitError": "Limit exceeded"
+  },
+  "description": {
+    "info": "Short description (see examples for popular projects on Techcrunch)",
+    "placeholder": "Decentralized exchange platform",
+    "required": true,
+    "maxLength": 40,
+    "error": "Please write something here",
+    "limitError": "Limit exceeded"
+  },
+  "website": {
+    "info": "Website",
+    "placeholder": "Your project website",
+    "required": true,
+    "error": "It can not be that you don't have a website"
+  },
+  "fullDescription": {
+    "info": "Full project description",
+    "placeholder": "Describe your project in 500 symbols",
+    "required": true,
+    "maxLength": 500,
+    "limitError": "Limit exceeded",
+    "error": "Describe what are you doing"
+  },
+  "industries": {
+    "info": "Industries",
+    "placeholder": "Choose up to 3 that describes your project the best",
+    "alternativeStrict": "Max 3",
+    "required": true,
+    "error": "Describe what are you doing"
+  },
+  "whitepaper": {
+    "id": 1,
+    "info": "Whitepaper",
+    "required": false,
+    "placeholder": "PDF, up to 50mb",
+    "multiple": false,
+    "maxFileSizeMB": 50,
+    "fileFormat": ["pdf"]
+  },
+  "pitchDeck": {
+    "id": 2,
+    "info": "Pitch deck (see template)",
+    "required": true,
+    "error": "No pitch deck? Do you even know where you are?",
+    "placeholder": "PDF, up to 50mb",
+    "multiple": false,
+    "maxFileSizeMB": 50,
+    "fileFormat": ["pdf"]
+  },
+  "images": {
+    "id": 3,
+    "info": "Images about project",
+    "required": true,
+    "error": "Please upload at least one image",
+    "placeholder": "PNG or JPG, min 800x600, up to 5mb",
+    "multiple": true,
+    "maxFileSizeMB": 5,
+    "fileFormat": ["png", "jpg", "jpeg"]
+  },
+  "videoFirst": {
+    "info": "Videos about your project",
+    "placeholder": "Youtube or Vimeo link",
+    "alternativeStrict": "Up to 2 videos, not required",
+    "required": false,
+    "error": "Whatever it is, this is definitely not a link to the video"
+  },
+  "videoSecond": {
+    "placeholder": "Youtube or Vimeo link",
+    "required": false,
+    "error": "Whatever it is, this is definitely not a link to the video"
+  }
+}

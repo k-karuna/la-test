@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-airbnb"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/",
+      "public/",
+      "build/"
+    ]
+  },
+  "rules": {
+    "align": false,
+    "import-name": false,
+    "variable-name": false,
+    "max-line-length": [true, 150],
+    "no-boolean-literal-compare": false,
+    "jsx-no-multiline-js": false,
+    "function-name": [
+      true,
+      {
+        "method-regex": "^[a-z][\\w\\d]+$",
+        "private-method-regex": "^[a-z][\\w\\d]+$",
+        "protected-method-regex": "^[a-z][\\w\\d]+$",
+        "static-method-regex": "^[a-zA-Z_\\d]+$",
+        "function-regex": "^[A-Za-z][\\w\\d]+$"
+      }
+    ]
+  }
+}
