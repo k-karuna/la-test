@@ -19,7 +19,8 @@
     "info": "Website",
     "placeholder": "Your project website",
     "required": true,
-    "error": "It can not be that you don't have a website"
+    "error": "It can not be that you don't have a website",
+    "isUrl": true
   },
   "fullDescription": {
     "info": "Full project description",
@@ -70,11 +71,13 @@
     "placeholder": "Youtube or Vimeo link",
     "alternativeStrict": "Up to 2 videos, not required",
     "required": false,
-    "error": "Whatever it is, this is definitely not a link to the video"
+    "error": "Whatever it is, this is definitely not a link to the video",
+    "isUrl": true
   },
   "videoSecond": {
     "placeholder": "Youtube or Vimeo link",
     "required": false,
-    "error": "Whatever it is, this is definitely not a link to the video"
+    "error": "Whatever it is, this is definitely not a link to the video",
+    "isUrl": true
   }
 }

@@ -19,9 +19,20 @@ interface Props {
 }
 
 const ImageUpload: FC<Props> = (props: Props) => {
+  const IMAGE_MIN_HEIGHT = 600;
+  const IMAGE_MIN_WIDTH = 800;
+
   const onFilesAdded = (files: File[]) => {
-    const { onChange } = props;
-    onChange(files);
+    files.forEach((file: File) => {
+      const img = new Image();
+      img.src = URL.createObjectURL(file);
+      img.onload = () => {
+        if (img.height >= IMAGE_MIN_HEIGHT || img.width >= IMAGE_MIN_WIDTH) {
+          const { onChange } = props;
+          onChange(files);
+        }
+      };
+    });
   };
 
   const deleteFile = (filename: string) => {

@@ -2,6 +2,7 @@ import { createAction } from 'redux-actions';
 import STORE from './store';
 import content from '@/content/fields.json';
 import { serverUrl } from '@/content/config.json';
+import { validateUrl } from '@/helpers/validators/';
 
 /**
  * Change value of Project name.
@@ -37,6 +38,10 @@ export const submitForm = () => (dispatch: any, getState: any) => {
     }
     if (content[key] && content[key].maxLength && storeValue.length > content[key].maxLength) {
       dispatch(doSetLimitError(key));
+    }
+
+    if (content[key] && content[key].isUrl && !validateUrl(storeValue)) {
+      dispatch(doSetError(key));
     }
   });
 
