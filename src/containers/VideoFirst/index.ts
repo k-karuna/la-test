@@ -4,16 +4,15 @@ import { connect } from 'react-redux';
 
 import content from '@/content/fields.json';
 
-const mapStateToProps = (state: any) => {
-  return {
-    info: content.videoFirst.info,
-    error: state.infoPage.error.videoFirst,
-    placeholder: content.videoFirst.placeholder,
-    required: content.videoFirst.required,
-    value: state.infoPage.videoFirst,
-    alternativeStrict: content.videoFirst.alternativeStrict,
-  };
-};
+const mapStateToProps = (state: any) => ({
+  name: content.videoFirst.name,
+  info: content.videoFirst.info,
+  error: state.infoPage.error.videoFirst,
+  placeholder: content.videoFirst.placeholder,
+  required: content.videoFirst.required,
+  value: state.infoPage.videoFirst,
+  alternativeStrict: content.videoFirst.alternativeStrict,
+});
 
 const mapDispatchToProps = (dispatch: any) => ({
   onChange: (value: string) => dispatch(changeVideoFirst(value)),

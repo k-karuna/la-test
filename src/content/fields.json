@@ -1,5 +1,6 @@
 {
   "name": {
+    "name": "projectname",
     "info": "Project name",
     "placeholder": "Fashion coin",
     "required": true,
@@ -8,6 +9,7 @@
     "limitError": "Limit exceeded"
   },
   "description": {
+    "name": "description",
     "info": "Short description (see examples for popular projects on Techcrunch)",
     "placeholder": "Decentralized exchange platform",
     "required": true,
@@ -16,6 +18,7 @@
     "limitError": "Limit exceeded"
   },
   "website": {
+    "name": "website",
     "info": "Website",
     "placeholder": "Your project website",
     "required": true,
@@ -23,6 +26,7 @@
     "isUrl": true
   },
   "fullDescription": {
+    "name": "fullDescription",
     "info": "Full project description",
     "placeholder": "Describe your project in 500 symbols",
     "required": true,
@@ -31,6 +35,7 @@
     "error": "Describe what are you doing"
   },
   "industries": {
+    "name": "industries",
     "info": "Industries",
     "placeholder": "Choose up to 3 that describes your project the best",
     "alternativeStrict": "Max 3",
@@ -38,6 +43,7 @@
     "error": "Describe what are you doing"
   },
   "whitepaper": {
+    "name": "whitepaper",
     "id": 1,
     "info": "Whitepaper",
     "required": false,
@@ -47,6 +53,7 @@
     "fileFormat": ["pdf"]
   },
   "pitchDeck": {
+    "name": "pitchDeck",
     "id": 2,
     "info": "Pitch deck (see template)",
     "required": true,
@@ -57,16 +64,19 @@
     "fileFormat": ["pdf"]
   },
   "images": {
+    "name": "images",
     "id": 3,
     "info": "Images about project",
     "required": true,
     "error": "Please upload at least one image",
     "placeholder": "PNG or JPG, min 800x600, up to 5mb",
+    "alternativeStrict": "Max 8, at least one required",
     "multiple": true,
     "maxFileSizeMB": 5,
     "fileFormat": ["png", "jpg", "jpeg"]
   },
   "videoFirst": {
+    "name": "videoFirst",
     "info": "Videos about your project",
     "placeholder": "Youtube or Vimeo link",
     "alternativeStrict": "Up to 2 videos, not required",
@@ -75,6 +85,7 @@
     "isUrl": true
   },
   "videoSecond": {
+    "name": "videoSecond",
     "placeholder": "Youtube or Vimeo link",
     "required": false,
     "error": "Whatever it is, this is definitely not a link to the video",

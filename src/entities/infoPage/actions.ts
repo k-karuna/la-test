@@ -29,7 +29,13 @@ export const submitForm = () => (dispatch: any, getState: any) => {
 
   Object.keys(getState()[STORE]).forEach(key => {
     const storeValue = getState()[STORE][key];
-    formData.append(key, storeValue);
+    if ((key === 'whitepaper' || key === 'pitchDeck') && storeValue && storeValue[0]) {
+      formData.append(key, storeValue[0]);
+    } else if (key === 'images') {
+      storeValue.forEach((image: File, index: number) => formData.append(`image${index}`, image));
+    } else if (key !== 'error') {
+      formData.append(key, storeValue);
+    }
     if (content[key] && content[key].required) {
       if (!storeValue || storeValue.length === 0) {
         dispatch(doSetError(key));
@@ -40,7 +46,7 @@ export const submitForm = () => (dispatch: any, getState: any) => {
       dispatch(doSetLimitError(key));
     }
 
-    if (content[key] && content[key].isUrl && !validateUrl(storeValue)) {
+    if (content[key] && content[key].isUrl && !validateUrl(storeValue) && storeValue) {
       dispatch(doSetError(key));
     }
   });

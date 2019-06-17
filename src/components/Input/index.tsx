@@ -15,6 +15,7 @@ type linkInfo = {
 };
 
 interface Props {
+  name: string;
   required: boolean;
   info?: string;
   maxLength?: number;
@@ -32,6 +33,7 @@ interface Props {
  * Input component.
  */
 const Input: FC<Props> = ({
+  name,
   error,
   placeholder,
   required,
@@ -84,6 +86,8 @@ const Input: FC<Props> = ({
           ref={inputRef}
           onChange={onInputChange}
           padding={padding}
+          name={name}
+          type="text"
         />
         {error && <Error error={error} target={inputRef} />}
       </Wrapper>

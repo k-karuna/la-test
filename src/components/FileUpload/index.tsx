@@ -8,6 +8,7 @@ import LabelText from '@/components/common/LabelText';
 import Label from '@/components/common/Label';
 import DeleteButton from '@/components/common/DeleteButton';
 import Error from '@/components/common/Error';
+import Restrictions from '@/components/common/Restrictions';
 import Color from '@/helpers/constants/Color';
 import { InputProps } from '@/components/Input';
 
@@ -20,6 +21,7 @@ interface Props extends Omit<InputProps, 'value' | 'onChange'> {
   onDelete?: () => void;
   files: File[];
   error: string;
+  alternativeStrict?: string;
 }
 
 const FileUpload: FC<Props> = (props: Props) => {
@@ -46,7 +48,7 @@ const FileUpload: FC<Props> = (props: Props) => {
     onDelete && onDelete();
   };
 
-  const { required, error, info, placeholder, id, multiple, fileFormat, files } = props;
+  const { name, required, error, info, placeholder, id, multiple, fileFormat, files, alternativeStrict } = props;
 
   const fileUploaded: boolean = files.length > 0 && !multiple;
 
@@ -58,6 +60,13 @@ const FileUpload: FC<Props> = (props: Props) => {
             {info}
           </Typography>
         </LabelText>
+        {alternativeStrict && (
+          <Restrictions>
+            <Typography opacity={0.3} color={Color.darkGray}>
+              {alternativeStrict}
+            </Typography>
+          </Restrictions>
+        )}
       </Label>
       <Root fileUploaded={fileUploaded} error={error.length > 0}>
         <FileLabel htmlFor={`fileUpload${id}`} ref={errorTarget}>
@@ -70,6 +79,7 @@ const FileUpload: FC<Props> = (props: Props) => {
         </FileLabel>
         {error && <Error error={error} target={errorTarget} />}
         <Input
+          name={name}
           type="file"
           id={`fileUpload${id}`}
           onChange={handleFilesChange}

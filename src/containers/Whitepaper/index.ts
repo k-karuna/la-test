@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import content from '@/content/fields.json';
 
 const mapStateToProps = (state: any) => ({
+  name: content.whitepaper.name,
   id: content.whitepaper.id,
   info: content.whitepaper.info,
   error: '',

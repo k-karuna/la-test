@@ -54,7 +54,7 @@ const Style = createGlobalStyle`
     font-family: inherit;
   }
 
-  @import "http://fonts.fontstorage.com/import/firasans.css";
+  @import "https://fonts.googleapis.com/css?family=Fira+Sans:400,500&subset=cyrillic";
 `;
 
 // Export.

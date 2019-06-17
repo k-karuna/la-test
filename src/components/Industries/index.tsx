@@ -19,6 +19,7 @@ interface Props {
   placeholder: string;
   required: boolean;
   alternativeStrict: string;
+  name: string;
 }
 
 class Industries extends Component<Props, State> {
@@ -64,7 +65,7 @@ class Industries extends Component<Props, State> {
   }
 
   render() {
-    const { info, error, placeholder, required, alternativeStrict } = this.props;
+    const { info, error, placeholder, required, alternativeStrict, name } = this.props;
     const { inputValue, industries } = this.state;
     const filteredIndustries = this.filterItems(content.items, inputValue);
     return (
@@ -76,6 +77,7 @@ class Industries extends Component<Props, State> {
           required={required}
           value={inputValue}
           alternativeStrict={alternativeStrict}
+          name={name}
           onChange={this.onInputChange}
           padding={this.state.padding}
         />
