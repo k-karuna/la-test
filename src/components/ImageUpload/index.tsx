@@ -19,7 +19,7 @@ interface Props {
   alternativeStrict: string;
 }
 
-const ImageUpload: FC<Props> = (props: Props) => {
+const ImageUpload: FC<Props> = props => {
   const IMAGE_MIN_HEIGHT = 600;
   const IMAGE_MIN_WIDTH = 800;
   const MAX_IMAGES = 8;

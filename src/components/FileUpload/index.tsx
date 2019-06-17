@@ -24,7 +24,7 @@ interface Props extends Omit<InputProps, 'value' | 'onChange'> {
   alternativeStrict?: string;
 }
 
-const FileUpload: FC<Props> = (props: Props) => {
+const FileUpload: FC<Props> = props => {
   const errorTarget = React.createRef<HTMLLabelElement>();
 
   const checkSize = (sizeBytes: number) => {
