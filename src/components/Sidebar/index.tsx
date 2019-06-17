@@ -24,7 +24,7 @@ interface Props {
 }
 
 /**
- * Header component.
+ * Sidebar component.
  */
 const Sidebar: FC<Props> = ({ links, ...props }) => (
   <Root {...props}>

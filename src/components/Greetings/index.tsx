@@ -12,7 +12,7 @@ interface Props {
 }
 
 /**
- * Main Section component.
+ * Greetings component in the top of screen.
  */
 const Greetings: FC<Props> = ({ data: { primaryText, username, secondaryText }, ...props }) => (
   <Root {...props}>
