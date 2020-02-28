@@ -1,5 +1,3 @@
-# latoken-test
-
 A test project build with:
 
 - Typescript
