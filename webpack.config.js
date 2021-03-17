@@ -25,42 +25,6 @@ module.exports = {
     }
   },
 
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(tsx?|d.ts)$/,
-  //       loader: 'awesome-typescript-loader'
-  //     },
-  //     {
-  //       test: /\.(gif|jpe?g|png|gif|svg|eot|ttf|woff|woff2|otf)$/,
-  //       loader: 'url-loader?limit=25000',
-  //       query: {
-  //         limit: 10000,
-  //         name: 'assets/[name].[hash:8].[ext]'
-  //       }
-  //     },
-  //     {
-  //       test: /\.css$/,
-  //       exclude: /\.module\.css$/,
-  //       use: [{loader: 'style-loader'}, {loader: 'css-loader'}]
-  //     },
-  //     {
-  //       test: /\.module\.css$/,
-  //       use: [
-  //         {loader: 'style-loader'},
-  //         {
-  //           loader: 'css-loader',
-  //           options: {
-  //             importLoaders: 1,
-  //             modules: true
-  //           }
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
-
-
 
   module: {
     rules: [
@@ -115,12 +79,8 @@ module.exports = {
   ].concat(isDevelopment ? [new webpack.HotModuleReplacementPlugin()] : []),
 
   devServer: {
-    host: '0.0.0.0',
-    port: '3000',
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    },
-    historyApiFallback: true
+    compress: true,
+    port: 3000,
   },
   externals: {
     Config: JSON.stringify({

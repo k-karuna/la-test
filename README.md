@@ -7,8 +7,8 @@ A test project build with:
 
 ## Run in the localhost
 
-1.  `yarn`.
+1.  `npm`.
 
-2.  `yarn start`
+2.  `npm run start`
 
-Build a static production code: `yarn build`
+Build a static production code: `npm run build`

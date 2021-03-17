@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "setup": "cp ./githooks/* .git/hooks && yarn",
-    "start": "cross-env NODE_ENV=development webpack serve --config webpack.config.js --progress --profile --content-base src/",
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.config.js --progress --profile --content-base src/ --open 'Chrome'",
     "build": "cross-env NODE_ENV=production webpack",
     "test": "tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx' && yarn build"
   },
