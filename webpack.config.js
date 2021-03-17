@@ -25,19 +25,64 @@ module.exports = {
     }
   },
 
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(tsx?|d.ts)$/,
+  //       loader: 'awesome-typescript-loader'
+  //     },
+  //     {
+  //       test: /\.(gif|jpe?g|png|gif|svg|eot|ttf|woff|woff2|otf)$/,
+  //       loader: 'url-loader?limit=25000',
+  //       query: {
+  //         limit: 10000,
+  //         name: 'assets/[name].[hash:8].[ext]'
+  //       }
+  //     },
+  //     {
+  //       test: /\.css$/,
+  //       exclude: /\.module\.css$/,
+  //       use: [{loader: 'style-loader'}, {loader: 'css-loader'}]
+  //     },
+  //     {
+  //       test: /\.module\.css$/,
+  //       use: [
+  //         {loader: 'style-loader'},
+  //         {
+  //           loader: 'css-loader',
+  //           options: {
+  //             importLoaders: 1,
+  //             modules: true
+  //           }
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
+
+
+
   module: {
     rules: [
       {
         test: /\.(tsx?|d.ts)$/,
-        loader: 'awesome-typescript-loader'
+        use: [
+          {
+            loader: 'awesome-typescript-loader'
+          }
+        ]
       },
       {
         test: /\.(gif|jpe?g|png|gif|svg|eot|ttf|woff|woff2|otf)$/,
-        loader: 'url-loader?limit=25000',
-        query: {
-          limit: 10000,
-          name: 'assets/[name].[hash:8].[ext]'
-        }
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: 'assets/[name].[hash:8].[ext]'
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -59,6 +104,7 @@ module.exports = {
       }
     ]
   },
+
 
   plugins: [
     new HtmlWebpackPlugin({

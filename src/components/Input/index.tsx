@@ -50,7 +50,7 @@ const Input: FC<Props> = ({
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => {
     onChange && onChange(e.target.value);
   };
-  const Component = as ? Description : Root;
+  // const Component = as ? Description : Root;
   const restrictions = maxLength || alternativeStrict;
   const overLength = maxLength ? value.length > maxLength : false;
 
@@ -79,7 +79,18 @@ const Input: FC<Props> = ({
         )}
       </Label>
       <Wrapper>
-        <Component
+        {as ? (
+          <Description
+          value={value}
+          error={(error && error.length > 0) || overLength}
+          placeholder={placeholder}
+          ref={inputRef}
+          onChange={onInputChange}
+          padding={padding}
+          name={name}
+        />
+        ) : (
+          <Root
           value={value}
           error={(error && error.length > 0) || overLength}
           placeholder={placeholder}
@@ -89,6 +100,9 @@ const Input: FC<Props> = ({
           name={name}
           type="text"
         />
+        )}
+
+
         {error && <Error error={error} target={inputRef} />}
       </Wrapper>
     </div>

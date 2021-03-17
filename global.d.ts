@@ -6,4 +6,4 @@ declare module '*.png';
 declare module '*.svg';
 declare module '*.ttf';
 
-type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
+// type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
